@@ -12,6 +12,7 @@
                 border-radius: 5px;
                 cursor: pointer;
             }
+
             .yellow-button {
                 background-color: #FFFAEC;
                 color: #6D2323;
@@ -20,9 +21,26 @@
             }
         </style>
     </head>
+    <style>
+        .button {
+            border-radius: 5px;
+            border: 2px solid #578E7E;
+            cursor: pointer;
+        }
+
+        .red-button {
+            background-color: #6D2323;
+            color: #FFFAEC;
+        }
+
+        .yellow-button {
+            background-color: #FFFAEC;
+            color: #6D2323;
+        }
+    </style>
 
     <body>
-        <button type="button" title="a tooltip" class="red-button">
+        <button type="button" title="a tooltip" class="red-button" onclick="alert('Good Job')">
             hello
         </button>
 
@@ -30,5 +48,8 @@
             A paragraph <button type="button" title="Good job!" class="yellow-button">Hello</button> of text
         </p>
     </body>
-
+<script>
+    // JavaScript code here
+    // alert('Hello Code');
+</script>
 </html>
