@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissor</p>
+    <button onclick="select('rock')" >Rock</button>
+    <button onclick="select('paper')" >Paper</button>
+    <button onclick="select('scissors')"" >Scissors</button>
+
+    <script>
+        function select(selection) {
+            const options = ["rock", "paper", "scissors"];
+            const userSelection = selection;
+            const computerSelection = options[Math.floor(Math.random() * 3)];
+            if (userSelection === "rock") {
+                if (computerSelection === "paper") {
+                    alert( `You picked ${userSelection}, Computer picks ${computerSelection}, Computer wins.` );
+                } else if (computerSelection === "scissors") {
+                    alert( `You picked ${userSelection}, Computer picks ${computerSelection}, You win.` );
+                } else {
+                    alert( `You picked ${userSelection}, Computer picks ${computerSelection}, It's a tie.` );
+                }
+            } else if (userSelection === "paper") {
+                if (computerSelection === "scissors") {
+                    alert(`You picked ${userSelection}, Computer picks ${computerSelection}, Computer wins.`);
+                } else if (computerSelection === "rock") {
+                    alert( `You picked ${userSelection}, Computer picks ${computerSelection}, You win.`);
+                } else {
+                    alert(`You picked ${userSelection}, Computer picks ${computerSelection}, It's a tie.`);
+                }
+            } else {
+                if (computerSelection === "rock") {
+                    alert( `You picked ${userSelection}, Computer picks ${computerSelection}, Computer wins.` );
+                } else if (computerSelection === "paper") {
+                    alert( `You picked ${userSelection}, Computer picks ${computerSelection}, You win.` );
+                } else {
+                    alert( `You picked ${userSelection}, Computer picks ${computerSelection}, It's a tie.` );
+                }
+            }
+        }
+    </script>
+</body>
+</html>
