@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            const product = {
+                name: 'socks',
+                price: 1090
+            };
+            console.log( product );
+            console.log( product.name );
+            console.log( product.price );
+            product.newProperty = "some dummy value";
+            console.log( product );
+            const product2 = {
+                name: 'shirt',
+            };
+            console.log( product2 );
+            console.log( product2.name );
+            console.log( product2[ 'name' ] );
+            delete product.newProperty;
+            console.log( product );
+            */
+            //    const product2 = {
+            //     name: 'shirt',
+            //    }
+            //    console.log(product2);
+            //    console.log(product2.name);
+            //    console.log(product2['name']);
+            let score = localStorage.getItem( 'score' ) || 1;
+            const product2 = {
+                name: 'shirt',
+                'delivery-time': '1 day',
+                rating: {
+                    stars: 4.5,
+                    count: 87,
+                },
+                fun: function () {
+                    console.log( 'function inside an object' );
+                }
+            };
+            console.log( product2 );
+            console.log( product2.rating.count );
+            console.log( product2[ 'delivery-time' ] );
+            product2.fun();
+            console.log( JSON.stringify( product2 ) );
+            console.log( JSON.parse( JSON.stringify( product2 ) ) );
+            console.log( score );
+            // localStorage.setItem( 'score', 1 );
+            console.log(localStorage.getItem('score'));
+        </script>
+    </body>
+
+</html>
