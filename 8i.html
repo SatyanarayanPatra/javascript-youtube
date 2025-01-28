@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Coin Flip</h1>
+        <button onclick='alert(flip("h"))'>heads</button>
+        <button onclick='alert(flip("t"))' >tails</button>
+            <script>
+                
+                function flip ( choice ) {
+                    let score = JSON.parse(localStorage.getItem( 'score' )) || { win: 0, lose: 0 };
+
+                    const result = ( choice === 'h' && Math.random() <= 0.5 ) || ( choice === 't' && Math.random() >= 0.5 ) ? 'Win' : 'Loss';
+                    if (result === 'Win') score.win++; else score.lose++;
+                    localStorage.setItem( 'score', JSON.stringify(score) );
+                    return `${result}
+Score :
+${score.win} Win - ${score.lose} Loss`;
+                }
+            </script>
+    </body>
+
+</html>
