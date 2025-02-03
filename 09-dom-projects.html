@@ -5,19 +5,50 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Dom Projects</title>
+		<style>
+			.no-arrows::-webkit-inner-spin-button,
+			.no-arrows::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				appearance: none;
+
+			}
+		</style>
 	</head>
 
 	<body>
 		<p>YouTube Subscribe Button</p>
-		<button id="js-subscribe-button" onclick="
-			subscribe()
-		"> Subscribe
+		<button id="js-subscribe-button" onclick="subscribe();"> Subscribe
 		</button>
+
+		<p>Amazon Shipping Calculator</p>
+
+		<input type="number" class="no-arrows" placeholder="cost of order" onkeydown="handleKeyDown(event)" />
+		<button onclick="calculateTotal()">Calculate</button>
+		<p class="js-total-cost"></p>
+
 		<script>
+			console.log(typeof String(25));
+			console.log("25" - 5);
+			function handleKeyDown(event) {
+				if ( event.key === 'Enter' ) {
+					calculateTotal();
+				}
+			}
 			function subscribe () {
 				const buttonElement = document.querySelector( '#js-subscribe-button' );
-				if ( buttonElement.innerText === 'Subscribe' ) buttonElement.innerText = 'Subscribed';
-				else buttonElement.innerText = 'Subscribe';
+				if ( buttonElement.innerHTML === 'Subscribe' ) buttonElement.innerHTML = 'Subscribed';
+				else buttonElement.innerHTML = 'Subscribe';
+			}
+			function calculateTotal () {
+				
+				const inputElement = document.querySelector( '.no-arrows' );
+				let cost = +inputElement.value;
+				if ( cost < 40 ) {
+					cost = cost + 10;
+				}
+				
+				document.querySelector( '.js-total-cost' )
+					.innerHTML = `$${cost}`;
 			}
 		</script>
 	</body>
