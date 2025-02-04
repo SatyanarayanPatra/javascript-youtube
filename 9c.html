@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Heads & Tails</title>
+</head>
+<body>
+	<button onclick="selection('heads')">Heads</button>
+	<button onclick="selection('tails')">Tails</button>
+	<p class="js-selection"></p>
+	<script>
+		function selection(selection) {
+			const selectionText = document.querySelector('.js-selection').innerHTML = `You chose : ${selection}`
+		}
+	</script>
+</body>
+</html>

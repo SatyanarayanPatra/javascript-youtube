@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>9-Assignment</title>
+</head>
+<body>
+	<button onclick="click9a()" class="a9">9a</button>
+	<button onclick="click9b()" class="b9">9b</button>
+	<script>
+		function click9a() {
+			const button = document.querySelector(".a9");
+			const button2 = document.querySelector('.b9');
+			button2.innerHTML = '9b';
+			window.console.log(button);
+		}
+		function click9b() {
+			const button = document.querySelector('.b9');
+			button.innerHTML = `9b done!`;
+		}
+	</script>
+</body>
+</html>
