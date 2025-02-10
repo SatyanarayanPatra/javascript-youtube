@@ -1,0 +1,21 @@
+body {
+	background-color: black;
+	color: white;
+}
+.js-calculation {
+	font-size: 25px;
+	padding: 0px 10px;
+}
+
+button {
+	background-color: #3B1C32;
+	color: white;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: 2px solid #243642;
+}
+
+.operations-btn {
+	background-color: orange;
+}
